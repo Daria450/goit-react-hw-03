@@ -3,7 +3,7 @@ import { IoPerson } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import s from './Contact.module.css'
 
-const Contact = ({ name, number }) => {
+const Contact = ({ name, number, id, onDelete }) => {
     return (
         <>
 
@@ -19,7 +19,7 @@ const Contact = ({ name, number }) => {
             </ul>
 
 
-            <button>Delete</button>
+            <button onClick={() => { onDelete(id) }}>Delete</button>
         </>
     )
 }
